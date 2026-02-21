@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class & Attribute</title>
+    <style>
+        
+        .active {
+            background-color: black;
+            color: white;
+        }
+
+        .flex {
+            width: 100vw;
+            display: block;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="flex">
+        <button id="toggle">Toggle Class</button>
+    </div>
+    <img id="gambar" src="">
+
+    <script>
+        const toggle = document.getElementById("toggle");
+        const gambar = document.getElementById("gambar");
+
+        let isActive = false;
+
+        toggle.addEventListener("click", () => {
+
+            toggle.classList.toggle("active");
+
+            if (!isActive) {
+                gambar.setAttribute("src", "image.png");
+                isActive = true;
+            } else {
+                gambar.setAttribute("src", "");
+                isActive = false;
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
