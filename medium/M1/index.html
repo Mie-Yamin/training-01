@@ -14,6 +14,18 @@
   <script>
     // Tuliskan JavaScript kamu di sini 
     // Tips: Gunakan if-else untuk memeriksa kondisi teks saat ini
+    let tombol = document.getElementById('tombolToggle');
+    tombol.addEventListener('click', function(){
+    let teks = document.getElementById('teksToggle');
+
+    if(teks.innerText === 'Ini teks yang bisa disembunyikan.'){
+      teks.innerText = '' ;
+      tombol.innerText = 'Tampilkan';
+    } else{
+      teks.innerText = 'Ini teks yang bisa disembunyikan.';
+      tombol.innerText ='Sembunyikan';
+    }
+    })
     
     
   </script>
