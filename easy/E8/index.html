@@ -13,7 +13,11 @@
 
   <script>
     // Tuliskan JavaScript kamu di sini 
+    let tombol = document.getElementById('tombolTanggal');
 
+    tombol.addEventListener('click', function(){
+      document.getElementById("infoTanggal").innerText = "Hari ini: Senin";
+    });
   </script>
 </body>
 </html>
