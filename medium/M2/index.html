@@ -17,6 +17,16 @@
   <script>
     // Tuliskan JavaScript kamu di sini 
     // Tips: Gunakan inputNama.value untuk membaca isi input
+    let tombol = document.getElementById('tombolCek');
+
+    tombol.addEventListener('click', function(){
+    let teks = document.getElementById('inputNama').value;
+      if (teks === ''){
+        document.getElementById('hasilCek').innerText = "Nama tidak boleh kosong!";
+      } else{
+        document.getElementById('hasilCek').innerText = "halo " + teks;
+      }
+    })
 
   </script>
 </body>
