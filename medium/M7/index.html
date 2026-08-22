@@ -20,6 +20,22 @@
     // Tips: Simpan ukuran font di variabel, format: "16px"
 
     let ukuranFont = 16;
+    let text = document.getElementById('teksUkuran');
+    let tombolBesar = document.getElementById('tombolBesar');
+    let tombolKecil = document.getElementById('tombolKecil');
+    let status = document.getElementById('statusUkuran');
+
+    tombolBesar.addEventListener('click', function(){
+      ukuranFont += 2;
+      text.style.fontSize = ukuranFont + "px";
+      status.innerText = "Ukuran saat ini: " + ukuranFont + "px"
+    })
+
+    tombolKecil.addEventListener('click', function(){
+      ukuranFont -= 2;
+      text.style.fontSize = ukuranFont + "px";
+      status.innerText = "Ukuran Saat ini: " + ukuranFont + 'px';
+    })
 
 
 
