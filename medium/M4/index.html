@@ -17,6 +17,21 @@
   <script>
     // Tuliskan JavaScript kamu di sini 
     // Tips: document.body.style.backgroundColor untuk ubah background halaman
+    let gelap = document.getElementById('tombolGelap');
+    let terang = document.getElementById('tombolTerang');
+    let status = document.getElementById('statusTema');
+
+    gelap.addEventListener('click', function(){
+      document.body.style.backgroundColor = 'black';
+      status.innerText = "Mode Gelap Aktif";
+      status.style.color = "white";
+    });
+
+    terang.addEventListener('click', function(){
+      document.body.style.backgroundColor = "white";
+      status.innerText = "Mode Terang Aktif";
+      status.style.color = 'black';
+    })
 
 
   </script>
