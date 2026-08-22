@@ -14,7 +14,13 @@
   <script>
     // Tuliskan JavaScript kamu di sini 
     // Tips: Buat variabel untuk menyimpan jumlah klik
+    let tombol = document.getElementById("tombolKlik");
+    let jumlah = 0;
 
+    tombol.addEventListener('click', function(){
+      jumlah += 1
+      document.getElementById("tampilKlik").innerText = "Jumlah Klik: " + jumlah;
+    });
   </script>
 </body>
 </html>
