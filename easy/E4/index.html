@@ -12,7 +12,12 @@
   <button id="tombolSembunyi">Sembunyikan</button>
 
   <script>
-    // Tuliskan JavaScript kamu di sini 👇    
+    // Tuliskan JavaScript kamu di sini 👇  
+    let tombol = document.getElementById("tombolSembunyi");
+
+    tombol.addEventListener('click', function(){
+      document.getElementById('teksRahasia').innerText = '';
+    });
     
   </script>
 </body>
