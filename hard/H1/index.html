@@ -17,12 +17,48 @@
 
   <script>
     // Tuliskan JavaScript kamu di sini 
-
-    let saldo = 500000;
-
     // Tips: Validasi input dulu sebelum proses transaksi
     // Tips: Untuk Tarik, cek apakah saldo >= nominal
 
+    let saldo = 500000;
+    let nominalInput = document.getElementById('inputNominal');
+    let tarik = document.getElementById('tombolTarik');
+    let setor = document.getElementById('tombolSetor');
+    let cek = document.getElementById('tombolCekSaldo');
+    let teks = document.getElementById('infoATM');
+
+    cek.addEventListener('click', function(){
+      teks.innerText = `Saldo kamu: Rp ${saldo}`;
+    });
+
+    setor.addEventListener('click', function(){
+      const nominal = Number(nominalInput.value);
+
+      if(!nominal | nominal <= 0){
+        teks.innerText = 'Masukkan nominal yang valid!'
+        return;
+      }
+
+      saldo += nominal;
+      teks.innerText = `Setor berhasil. Saldo: Rp ${saldo}`
+
+    })
+
+    tarik.addEventListener('click', function(){
+      const nominal = Number(nominalInput.value);
+
+      if(!nominal | nominal <= 0){
+        teks.innerText = 'Masukkan nominal yang valid!';
+        return;
+      }
+      
+      if (nominal > saldo) {
+        teks.innerText = 'Saldo tidak cukup!'
+      } else{
+        saldo -= nominal;
+        teks.innerText = `Penarikan berhasil. Saldo: Rp ${saldo}`
+      }
+    })
 
 
     
